@@ -8,6 +8,6 @@ def solution(x) -> bool: # Одна или две выборке на входе
     import scipy.stats as sts
     alpha = 0.06 
     t_value, p_value = sts.ttest_1samp(a = x, popmean = 300)
-    answer = p_value/2 < alpha and t_value > 0
+    answer = p_value < alpha  
     # Не меняйте название функции и её аргументы
     return answer # Ваш ответ, True или False
